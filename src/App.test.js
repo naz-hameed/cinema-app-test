@@ -20,7 +20,7 @@ test('Check that there is a header component', () => {
   const testInstance = shallow(<Header />);
   expect(testInstance.find("h1").text()).toBe("Our Header");
 });
-test('Check that there is a header component', () => {
+test('Check that there is a Footer component', () => {
   const testInstance = shallow(<Footer />);
   expect(testInstance.find("h1").text()).toBe("Our Footer");
 });
