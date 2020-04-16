@@ -7,7 +7,7 @@ import Footer from './Components/Footer';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header /> <h1>Welcome to Sky cinemas</h1>
       <Footer />
     </div>
   );
