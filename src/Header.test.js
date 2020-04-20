@@ -5,31 +5,35 @@ import { configure, shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16'
 configure({ adapter: new Adapter() });
 import Header from './Components/Header';
+import renderer from 'react-test-renderer';
 
 
-describe("testing our header", () => {
+describe("Testing our header", () => {
+    test('Check that there is a home button', () => {
+        const testInstance = shallow(<Header />);
+        expect(testInstance.find("#home-btn").text()).toBe("Home");
+    })
 
-test('Check that there is a home button', () => {
-    const testInstance = shallow(<Header />);
-    expect(testInstance.find("#home-btn").text()).toBe("Home");
-})
+    test('Check that there is a schedule button', () => {
+        const testInstance = shallow(<Header />);
+        expect(testInstance.find("#schedule-btn").text()).toBe("Schedule");
+    })
 
-test('Check that there is a schedule button', () => {
-    const testInstance = shallow(<Header />);
-    expect(testInstance.find("#schedule-btn").text()).toBe("Schedule");
-})
+    test('Check that there is a sign up button', () => {
+        const testInstance = shallow(<Header />);
+        expect(testInstance.find("#signup-btn").text()).toBe("SignUp");
+    })
 
-test('Check that there is a sign up button', () => {
-    const testInstance = shallow(<Header />);
-    expect(testInstance.find("#signup-btn").text()).toBe("SignUp");
-})
-
-test('check the logo', () => {
-    const testInstance = shallow(<Header />);
-    expect(testInstance.find("img").prop("src")).toEqual("cinema-logo.png");
-})
-
+    test('Check the logo', () => {
+        const testInstance = shallow(<Header />);
+        expect(testInstance.find("img").prop("src")).toEqual("cinema-logo.png");
+    })
 });
+
+it('Snapshot test for header rendering correctly', () => {
+    const tree = renderer.create(<Header />).toJSON();
+    expect(tree).toMatchSnapshot();
+})
 
 // test('check the menu', () => {
 //     const testInstance = shallow(<Header />);

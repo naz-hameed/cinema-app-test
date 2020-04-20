@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for header rendering correctly 1`] = `
+<header>
+  <img
+    alt="logo"
+    className="App-logo"
+    src="cinema-logo.png"
+  />
+  <nav
+    className="navbar navbar-expand-sm"
+  >
+    <p />
+    <button
+      id="home-btn"
+    >
+      Home
+    </button>
+    <button
+      id="schedule-btn"
+    >
+      Schedule
+    </button>
+    <button
+      id="signup-btn"
+    >
+      SignUp
+    </button>
+  </nav>
+</header>
+`;

@@ -8,20 +8,18 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 
 
-describe("testing our cinema app", () => {
-
-  test('render header component', () => {
+describe("Testing our cinema app", () => {
+  test('Render header component', () => {
    const testInstance = mount(<App />);
     expect(testInstance.find("#home-btn").text()).toBe("Home");
   })
   
-  test('render footer component', () => {
+  test('Render footer component', () => {
     const testInstance = mount(<App />);
      expect(testInstance.find("Footer").text()).toContain("Sky");
    })
-
-
 });
+
 
 // test('renders learn react link', () => {
 //   const { getByText } = render(<App />);
