@@ -1,0 +1,9 @@
+.imagerow {
+    display: flex;
+    padding: 30px;
+}
+
+.imagecolumn {
+    flex: 33.33%;
+    padding: 10px;
+}

@@ -1,0 +1,41 @@
+/* .App {
+  text-align: center;
+} */
+header
+{
+  background-color: white;
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+footer
+{
+  background-color: white;
+  text-align: center;
+
+}
+
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+  color: blue;
+  display: inline;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.PageContent {
+  background-color: white;
+}
+
+.Links {
+  list-style-type: none;
+}

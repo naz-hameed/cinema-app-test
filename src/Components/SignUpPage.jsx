@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import SignUpForm from './SignUpForm';
-import Popup from 'reactjs-popup';
 
 
 const SignUpPage  = () => {
