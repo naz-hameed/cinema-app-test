@@ -1,13 +1,16 @@
-import React from 'react';
+import React from 'react'
+import './App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
-import './App.css';
+import SignUpPage from './Components/SignUpPage';
+
 
 function App() {
-  return (
-    <div>
 
+  return (
+    <div className="App">
       <Header />
+      <SignUpPage />
       <Footer />
     </div>
 
