@@ -16,6 +16,26 @@ footer
   text-align: center;
 }
 
+.signup{
+  padding: 20px;
+  line-height: 2.5;
+}
+
+.signup table {
+
+  width: 50%;
+  font-size: 14px;
+ 
+}
+
+.signup button {
+  background-color:skyblue;
+  border-radius: 6px;
+  font-size: 16px;
+ 
+}
+
+
 .App-logo {
   height: 10vmin;
   pointer-events: none;
