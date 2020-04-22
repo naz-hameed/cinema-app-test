@@ -27,5 +27,19 @@ exports[`Snapshot test for header rendering correctly 1`] = `
       SignUp
     </button>
   </nav>
+  <div>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/schedule-form"
+            onClick={[Function]}
+          >
+            Schedule
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
 `;
