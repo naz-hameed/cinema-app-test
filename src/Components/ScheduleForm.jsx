@@ -3,7 +3,7 @@ import HeroImage from './HeroImage';
 import CinemaSchedule from './CinemaSchedule';
 import LatestFilmCarousel from './LatestFilmCarousel';
 
-const ScheduleForm  = () => {
+const ScheduleForm = () => {
     return (
         <div>
             <br />
@@ -14,6 +14,7 @@ const ScheduleForm  = () => {
             <br />
         </div>
 
-)};
+    )
+};
 
 export default ScheduleForm;
