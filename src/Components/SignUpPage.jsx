@@ -43,15 +43,17 @@ const SignUpPage  = () => {
 
 
     return (
-        <div>
+      <div class='form'>
+        <h1>Sign Up</h1>
+        <p> </p>
         <h3>Title        : {title}</h3>
-      <h3>First Name   : {fname}</h3>
-      <h3>Last Name    : {lname}</h3>
-      <h3>Email        : {email}</h3>
-      <h3>Date of Birth: {date}</h3>
-      <h3>Phone        : {phone}</h3>
-      <h3>Gender       : {gender}</h3>
-      <SignUpForm submitTitle={showTitle} submitLname = {showLname} submitFname = {showFname} submitDate = {showDate} submitEmail={showEmail} submitPhone={showPhone} submitGender={showGender} />
+        <h3>First Name   : {fname}</h3>
+        <h3>Last Name    : {lname}</h3>
+        <h3>Email        : {email}</h3>
+        <h3>Date of Birth: {date}</h3>
+        <h3>Phone        : {phone}</h3>
+        <h3>Gender       : {gender}</h3>
+        <SignUpForm submitTitle={showTitle} submitLname = {showLname} submitFname = {showFname} submitDate = {showDate} submitEmail={showEmail} submitPhone={showPhone} submitGender={showGender} />
       </div>    
 )};
 

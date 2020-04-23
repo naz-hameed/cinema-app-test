@@ -15,7 +15,6 @@ const CinemaSchedule = () => {
     
     return (
         <div className="center-div">
-            <h3>Schedule</h3>
             <table border="1" id="scheduletable">
                 <thead>
                     <tr>

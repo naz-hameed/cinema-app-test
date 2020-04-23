@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <>
             <header>
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={logo} class="App-logo form" alt="logo" />
             </header>
         </>
     );

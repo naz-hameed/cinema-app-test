@@ -20,11 +20,12 @@ function App() {
             <Header />
             <ul className='Links'>
               <li>
-                <Link to='/home-page' class="button">Home</Link>
+
+                <Link to='/home-page' class="button menubutton">Home</Link>
                 &nbsp; &nbsp;
-                            <Link to='/schedule-form' class="button">Schedule</Link>
+                            <Link to='/schedule-form' class="button menubutton">Schedule</Link>
                 &nbsp; &nbsp;
-                            <Link to='/signup-page' class="button">Sign-Up Page</Link>
+                            <Link to='/signup-page' class="button menubutton">Sign-Up Page</Link>
 
 
               </li>
