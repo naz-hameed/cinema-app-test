@@ -1,5 +1,5 @@
 import React from 'react';
-import scheduleTable from './ScheduleTable.json';
+import scheduleTable from './scheduletable.json';
 
 const CinemaSchedule = () => {
     const scheduleList = scheduleTable.map(showing => 
