@@ -58,7 +58,7 @@
                 <table>
                 
                     <tr> 
-                    <td> <label> Title *: </label> </td> 
+                    <td> <label id = "title"> Title *: </label> </td> 
 
                     <td>
                     <select value={title} onChange = {handleTitleChange}>
@@ -74,7 +74,7 @@
 
                     <tr>
 
-                    <td> <label> First Name* : </label> </td>
+                    <td> <label id = "firstname"> First Name* : </label> </td>
 
                     <td>
                     <input type='fname' value={fname} onChange={handleFnameChange} required></input>
@@ -84,7 +84,7 @@
 
 
                     <tr>
-                    <td> <label >Last Name* : </label> </td>
+                    <td> <label id = "lastname">Last Name* : </label> </td>
 
                     <td>
                     <input type='lname' value={lname}  onChange={handleLnameChange} required></input>
@@ -93,7 +93,7 @@
                     </tr>
                         
                     <tr>
-                    <td><label>Email: </label></td>
+                    <td><label id = "emailid">Email: </label></td>
 
                     <td>
                     <input type='email' value={email} onChange={handleEmailChange} required></input>
@@ -102,7 +102,7 @@
                     </tr>
             
             <tr>
-                <td> <label>Date of Birth: </label> </td>
+                <td> <label id = "dob">Date of Birth: </label> </td>
 
                 <td>
                 <input type='date' value={date} onChange={handleDateChange} required></input>
@@ -110,20 +110,20 @@
             </tr>
 
             <tr>
-                <td> <label>Phone : </label></td> 
+                <td> <label id = "phonenum">Phone : </label></td> 
                 <td> <input type='phone' value={phone} onChange={handlePhoneChange} required></input></td>
             </tr>
             
             <tr>
                 <td> </td>
                 <td>
-                    <label> 
+                <label id = "male-btn"> 
                 <input type="radio" value="male" name="gender" onChange={handleGenderChange} required />
                 Male
                 </label> 
                &nbsp;
 
-                <label>
+                <label id = "female-btn">
                 <input type="radio" value="female" name="gender"  onChange={handleGenderChange} required />
                 Female
                 </label>
@@ -134,7 +134,7 @@
                 <td> </td>
                 <td>
                 <Popup
-            trigger={<button className="button">Sign me up !</button>}
+            trigger={<button id = "signup-btn" className="button">Sign me up !</button>}
             modal
             closeOnDocumentClick >
         

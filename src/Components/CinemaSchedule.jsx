@@ -15,6 +15,7 @@ const CinemaSchedule = () => {
     
     return (
         <div className="center-div">
+            <div id = "schedule-title"><h3>Schedule</h3></div>
             <table border="1" id="scheduletable">
                 <thead>
                     <tr>
