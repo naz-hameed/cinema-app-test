@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
@@ -6,12 +6,24 @@ import SignUpPage from './Components/SignUpPage';
 import ScheduleForm from './Components/ScheduleForm';
 import HomePage from './Components/HomePage';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
+import axios from 'axios';
 import './Components/css/App.css';
 
+
 function App() {
+  const [scheduletable, setScheduleTable] = useState([])
+
+  useEffect(() => {
+    const getData = async() => {
+      let response = await axios.get('http://localhost:4000/scheduletable')
+      let scheduletable = await response.data
+      setScheduleTable(scheduletable)
+    }
+    getData()
+  },[])
 
   return (
+
     <div className="App">
 
       <Router>
@@ -38,6 +50,10 @@ function App() {
             <Route path='/' exact component={HomePage} />
             <Route path='/home-page' exact component={HomePage} />
           </div>
+
+          <ul>
+          {scheduletable.map(movies => <li key={movies.id}>{movies.movie}</li>)}
+        </ul>
 
         </div >
       </Router >
