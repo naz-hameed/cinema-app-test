@@ -11,8 +11,8 @@ const LatestFilmCarousel  = () => {
     return (
         <div>
            <div id ="latestfilms-title"> <h3>Latest Films</h3> </div>
-            <Carousel showThumbs={false} width={'50%'}>
-            <div style={{ height: '10px' }}>
+            <Carousel showThumbs={false} width={'10%'} dynamicHeight={true}>
+           
                 <div>
                 <img src={logo} alt="Latest Film Images"/>
                 <p className="legend">Black Widow</p>
@@ -28,7 +28,7 @@ const LatestFilmCarousel  = () => {
             <div>
                 <img src={logo3} alt="Latest Film Images"/>
                 <p className="legend">WonderWoman</p>
-            </div>
+            
             </div>
 
             </Carousel>

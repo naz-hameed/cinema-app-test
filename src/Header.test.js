@@ -9,21 +9,7 @@ import renderer from 'react-test-renderer';
 
 
 describe("Testing our header", () => {
-    test('Check that there is a home button', () => {
-        const testInstance = shallow(<Header />);
-        expect(testInstance.find("#home-btn").text()).toBe("Home");
-    })
-
-    test('Check that there is a schedule button', () => {
-        const testInstance = shallow(<Header />);
-        expect(testInstance.find("#schedule-btn").text()).toBe("Schedule");
-    })
-
-    test('Check that there is a sign up button', () => {
-        const testInstance = shallow(<Header />);
-        expect(testInstance.find("#signup-btn").text()).toBe("SignUp");
-    })
-
+    
     test('Check the logo', () => {
         const testInstance = shallow(<Header />);
         expect(testInstance.find("img").prop("src")).toEqual("cinema-logo.png");
