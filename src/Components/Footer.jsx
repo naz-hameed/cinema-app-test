@@ -6,7 +6,8 @@ const Footer = () => {
         <footer className = "mt-auto py-3 container">
             <hr width="50%"></hr>
             &copy; Copyright Sky
-            <p></p>
+            <br/>
+            <br />
         </footer>
        
 

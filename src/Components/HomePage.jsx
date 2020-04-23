@@ -8,9 +8,12 @@ const HomePage  = () => {
         <div class='form'>
             <h1>Home</h1>
             <p></p>
-            <p>Some text about the cinemas</p>
+            <p>Welcome to the future, Sky Cinemas are the ultimate social distancing entertainment destinations.</p>
+            <li>Take no chances with Covid-19</li>
+            <li>All the latest releases</li>
+            <li>Full menu delivered to your car</li>
+            <li>Walkers / cyclist / skaters social distancing zones available</li>
             <CinemaImages />
-            <p>Some more text</p>
             <p></p>
         </div>
             

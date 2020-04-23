@@ -32,6 +32,10 @@ test('Check that there is a sign up button', () => {
 });
 
 
+
+
+
+
 // test('renders learn react link', () => {
 //   const { getByText } = render(<App />);
 //   const linkElement = getByText(/learn react/i);

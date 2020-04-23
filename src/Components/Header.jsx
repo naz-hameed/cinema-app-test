@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './images/cinema-logo.png';
+import logo from './images/skycinemas.png';
 
 
 
@@ -7,6 +7,7 @@ const Header = () => {
     return (
         <>
             <header>
+                <br />
                 <img src={logo} class="App-logo form" alt="logo" />
             </header>
         </>
