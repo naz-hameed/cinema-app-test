@@ -15,31 +15,31 @@ function App() {
     <div className="App">
 
       <Router>
-            <div >
-                <nav >
-                  <Header />
-                    <ul className='Links'>
-                        <li>
-                            <Link to='/home-page'>Home</Link>  
-                            &nbsp; &nbsp; 
-                            <Link to='/schedule-form'>Schedule</Link>
-                            &nbsp; &nbsp; 
-                            <Link to='/signup-page'>Sign-Up Page</Link>
+        <div >
+          <nav >
+            <Header />
+            <ul className='Links'>
+              <li>
+                <Link to='/home-page' class="button">Home</Link>
+                &nbsp; &nbsp;
+                            <Link to='/schedule-form' class="button">Schedule</Link>
+                &nbsp; &nbsp;
+                            <Link to='/signup-page' class="button">Sign-Up Page</Link>
 
-                          
-                        </li>
-                    </ul >
-                </nav >
 
-                <div className='PageContent'>
-                <Route path='/schedule-form' exact component={ScheduleForm} />
-                <Route path='/signup-page' exact component={SignUpPage} />
-                <Route path='/' exact component={HomePage} />    
-                <Route path='/home-page' exact component={HomePage} />  
-                </div>                  
+              </li>
+            </ul >
+          </nav >
 
-            </div >
-        </Router >
+          <div className='PageContent'>
+            <Route path='/schedule-form' exact component={ScheduleForm} />
+            <Route path='/signup-page' exact component={SignUpPage} />
+            <Route path='/' exact component={HomePage} />
+            <Route path='/home-page' exact component={HomePage} />
+          </div>
+
+        </div >
+      </Router >
       <Footer />
     </div>
 
