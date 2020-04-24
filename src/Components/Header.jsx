@@ -15,9 +15,6 @@ const Header = () => {
 };
 export default Header;
 
-
-
-
 //{ <p></p>
 //<button id="home-btn">Home</button>
 //<button id="schedule-btn">Schedule</button>

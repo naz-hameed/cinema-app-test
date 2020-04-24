@@ -7,28 +7,37 @@ import ScheduleForm from './Components/ScheduleForm';
 import HomePage from './Components/HomePage';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import PageNotFound from './Components/PageNotFound';
-
 import './Components/css/App.css';
 
-function App() {
 
+function App() {
   return (
     <div className="App">
-
       <Router>
-        <div >
-          <nav >
+        <div>
+          <nav>
             <Header />
-            <ul className='Links'>
+            <ul className="Links">
               <li>
-
-                <Link id="home-btn" to='/home-page' class="button menubutton">Home</Link>
+                <Link id="home-btn" to="/home-page" class="button menubutton">
+                  Home
+                </Link>
                 &nbsp; &nbsp;
-                            <Link id="schedule-btn" to='/schedule-form' class="button menubutton">Schedule</Link>
+                <Link
+                  id="schedule-btn"
+                  to="/schedule-form"
+                  class="button menubutton"
+                >
+                  Schedule
+                </Link>
                 &nbsp; &nbsp;
-                            <Link id="signup-btn" to='/signup-page' class="button menubutton">Sign-Up Page</Link>
-
-
+                <Link
+                  id="signup-btn"
+                  to="/signup-page"
+                  class="button menubutton"
+                >
+                  Sign-Up Page
+                </Link>
               </li>
             </ul >
           </nav >
@@ -42,13 +51,10 @@ function App() {
               <Route component={PageNotFound} />
             </Switch>
           </div>
-
-        </div >
-      </Router >
+        </div>
+      </Router>
       <Footer />
     </div>
-
-
   );
 }
 export default App;

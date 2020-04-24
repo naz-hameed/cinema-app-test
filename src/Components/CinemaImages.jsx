@@ -19,10 +19,11 @@ const CinemaImages  = () => {
                                 <a href='https://goo.gl/maps/fGYHbxWNstFujanR9' target="_blank" rel="noopener noreferrer" ><img src={driveInMan} alt="Drive In Manchester" width="100%"/></a>
                         </div>
                 </div>
+      
         </div>
-            
-)};
+
+
+  );
+};
 
 export default CinemaImages;
-
-
