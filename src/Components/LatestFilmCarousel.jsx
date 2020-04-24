@@ -1,40 +1,39 @@
-import React from 'react';
-import logo from './images/BlackWidow.png';
-import logo1 from './images/InvisibleMan.png';
-import logo2 from './images/Mulan.png';
-import logo3 from './images/WonderWoman.png';
+import React from "react";
+import logo from "./images/BlackWidow.png";
+import logo1 from "./images/InvisibleMan.png";
+import logo2 from "./images/Mulan.png";
+import logo3 from "./images/WonderWoman.png";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
- 
+import { Carousel } from "react-responsive-carousel";
 
-const LatestFilmCarousel  = () => {
-    return (
+const LatestFilmCarousel = () => {
+  return (
+    <div>
+      <div id="latestfilms-title">
+        {" "}
+        <h3>Latest Films</h3>{" "}
+      </div>
+      
+      <Carousel showThumbs={false} width={"10%"} dynamicHeight={true}>
         <div>
-           <div id ="latestfilms-title"> <h3>Latest Films</h3> </div>
-            <Carousel showThumbs={false} width={'10%'} dynamicHeight={true}>
-           
-                <div>
-                <img src={logo} alt="Latest Film Images"/>
-                <p className="legend">Black Widow</p>
-            </div>
-            <div>
-                <img src={logo1} alt="Latest Film Images"/>
-                <p className="legend">The Invisible Man</p>
-            </div>
-            <div>
-                <img src={logo2} alt="Latest Film Images"/>
-                <p className="legend">Mulan</p>
-            </div>
-            <div>
-                <img src={logo3} alt="Latest Film Images"/>
-                <p className="legend">WonderWoman</p>
-            
-            </div>
-
-            </Carousel>
-            
+          <img src={logo} alt="Latest Film Images" />
+          <p className="legend">Black Widow</p>
         </div>
-       
-)};
+        <div>
+          <img src={logo1} alt="Latest Film Images" />
+          <p className="legend">The Invisible Man</p>
+        </div>
+        <div>
+          <img src={logo2} alt="Latest Film Images" />
+          <p className="legend">Mulan</p>
+        </div>
+        <div>
+          <img src={logo3} alt="Latest Film Images" />
+          <p className="legend">WonderWoman</p>
+        </div>
+      </Carousel>
+    </div>
+  );
+};
 
 export default LatestFilmCarousel;

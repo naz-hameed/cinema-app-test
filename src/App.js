@@ -1,66 +1,55 @@
-import React, {useState,useEffect} from 'react';
-import './App.css';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import SignUpPage from './Components/SignUpPage';
-import ScheduleForm from './Components/ScheduleForm';
-import HomePage from './Components/HomePage';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import axios from 'axios';
-import './Components/css/App.css';
-
+import React from "react";
+import "./App.css";
+import Header from "./Components/Header";
+import Footer from "./Components/Footer";
+import SignUpPage from "./Components/SignUpPage";
+import ScheduleForm from "./Components/ScheduleForm";
+import HomePage from "./Components/HomePage";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import "./Components/css/App.css";
 
 function App() {
-  const [scheduletable, setScheduleTable] = useState([])
-
-  useEffect(() => {
-    const getData = async() => {
-      let response = await axios.get('http://localhost:4000/scheduletable')
-      let scheduletable = await response.data
-      setScheduleTable(scheduletable)
-    }
-    getData()
-  },[])
-
   return (
-
     <div className="App">
-
       <Router>
-        <div >
-          <nav >
+        <div>
+          <nav>
             <Header />
-            <ul className='Links'>
+            <ul className="Links">
               <li>
-
-                <Link id="home-btn" to='/home-page' class="button menubutton">Home</Link>
+                <Link id="home-btn" to="/home-page" class="button menubutton">
+                  Home
+                </Link>
                 &nbsp; &nbsp;
-                            <Link id="schedule-btn" to='/schedule-form' class="button menubutton">Schedule</Link>
+                <Link
+                  id="schedule-btn"
+                  to="/schedule-form"
+                  class="button menubutton"
+                >
+                  Schedule
+                </Link>
                 &nbsp; &nbsp;
-                            <Link id="signup-btn" to='/signup-page' class="button menubutton">Sign-Up Page</Link>
-
-
+                <Link
+                  id="signup-btn"
+                  to="/signup-page"
+                  class="button menubutton"
+                >
+                  Sign-Up Page
+                </Link>
               </li>
-            </ul >
-          </nav >
+            </ul>
+          </nav>
 
-          <div className='PageContent'>
-            <Route path='/schedule-form' exact component={ScheduleForm} />
-            <Route path='/signup-page' exact component={SignUpPage} />
-            <Route path='/' exact component={HomePage} />
-            <Route path='/home-page' exact component={HomePage} />
+          <div className="PageContent">
+            <Route path="/schedule-form" exact component={ScheduleForm} />
+            <Route path="/signup-page" exact component={SignUpPage} />
+            <Route path="/" exact component={HomePage} />
+            <Route path="/home-page" exact component={HomePage} />
           </div>
-
-          <ul>
-          {scheduletable.map(movies => <li key={movies.id}>{movies.movie}</li>)}
-        </ul>
-
-        </div >
-      </Router >
+        </div>
+      </Router>
       <Footer />
     </div>
-
-
   );
 }
 export default App;

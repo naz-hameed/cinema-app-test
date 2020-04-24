@@ -1,21 +1,16 @@
-import React from 'react';
-import logo from './images/cinema-logo.png';
-
-
+import React from "react";
+import logo from "./images/cinema-logo.png";
 
 const Header = () => {
-    return (
-        <>
-            <header>
-                <img src={logo} class="App-logo form" alt="logo" />
-            </header>
-        </>
-    );
+  return (
+    <>
+      <header>
+        <img src={logo} class="App-logo form" alt="logo" />
+      </header>
+    </>
+  );
 };
 export default Header;
-
-
-
 
 //{ <p></p>
 //<button id="home-btn">Home</button>
