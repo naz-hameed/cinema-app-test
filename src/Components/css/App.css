@@ -81,6 +81,12 @@ footer
   color: #0ae7fc;
 }
 
+.signuparea {
+  border: 2px solid #0ae7fc;
+  padding: 16px 32px;
+  width: 75%;
+  font-size: 14px;
+}
 
 
 
