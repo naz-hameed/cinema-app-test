@@ -45,12 +45,12 @@ footer
 }
 
 
-// buttons
+
 
 .button {
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 6px 6px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -73,7 +73,7 @@ footer
   background-color: white; 
   color: black; 
   border: 2px solid #0ae7fc;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .menubutton:hover {
@@ -86,6 +86,7 @@ footer
   padding: 16px 32px;
   width: 75%;
   font-size: 14px;
+  border-radius: 4px;
 }
 
 
