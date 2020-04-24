@@ -8,6 +8,7 @@ exports[`Snapshot test for footer rendering correctly 1`] = `
     width="50%"
   />
   © Copyright Sky
-  <p />
+  <br />
+  <br />
 </footer>
 `;

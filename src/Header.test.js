@@ -12,7 +12,7 @@ describe("Testing our header", () => {
     
     test('Check the logo', () => {
         const testInstance = shallow(<Header />);
-        expect(testInstance.find("img").prop("src")).toEqual("cinema-logo.png");
+        expect(testInstance.find("img").prop("src")).toEqual("skycinemas.png");
     })
 });
 

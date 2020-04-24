@@ -2,10 +2,11 @@
 
 exports[`Snapshot test for header rendering correctly 1`] = `
 <header>
+  <br />
   <img
     alt="logo"
     class="App-logo form"
-    src="cinema-logo.png"
+    src="skycinemas.png"
   />
 </header>
 `;
