@@ -5,7 +5,8 @@ import Footer from './Components/Footer';
 import SignUpPage from './Components/SignUpPage';
 import ScheduleForm from './Components/ScheduleForm';
 import HomePage from './Components/HomePage';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import PageNotFound from './Components/PageNotFound';
 
 import './Components/css/App.css';
 
@@ -33,10 +34,13 @@ function App() {
           </nav >
 
           <div className='PageContent'>
-            <Route path='/schedule-form' exact component={ScheduleForm} />
-            <Route path='/signup-page' exact component={SignUpPage} />
-            <Route path='/' exact component={HomePage} />
-            <Route path='/home-page' exact component={HomePage} />
+            <Switch>
+              <Route path='/schedule-form' exact component={ScheduleForm} />
+              <Route path='/signup-page' exact component={SignUpPage} />
+              <Route path='/' exact component={HomePage} />
+              <Route path='/home-page' exact component={HomePage} />
+              <Route component={PageNotFound} />
+            </Switch>
           </div>
 
         </div >
