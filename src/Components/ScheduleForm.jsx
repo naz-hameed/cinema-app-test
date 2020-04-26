@@ -1,14 +1,14 @@
 import React from "react";
-import HeroImage from "./HeroImage";
 import CinemaSchedule from "./CinemaSchedule";
 import LatestFilmCarousel from "./LatestFilmCarousel";
+import OpeningHours from "./OpeningHours";
 
 const ScheduleForm = () => {
   return (
     <div class="form">
       <h1>Schedule</h1>
-      <HeroImage />
-      <br />
+
+      <OpeningHours />
       <br />
       <CinemaSchedule />
       <br />

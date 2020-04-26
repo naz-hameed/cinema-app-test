@@ -52,11 +52,6 @@ const CinemaSchedule = () => {
         </thead>
         <tbody>{scheduleList}</tbody>
       </table>
-      <ul>
-        {scheduletable.map((movies) => (
-          <li key={movies.id}>{movies.movie}{movies.times}</li>
-        ))}
-      </ul>
     </div>
   );
 };
