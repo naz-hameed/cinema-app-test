@@ -11,6 +11,7 @@ const SignUpPage  = () => {
         const [date,setDate] = useState('-')
         const [phone,setPhone] = useState('-')
         const [gender,setGender] = useState('-')
+        const [thanks,setThanks] = useState('')
         
       
         const showTitle = title => {
@@ -41,15 +42,19 @@ const SignUpPage  = () => {
           setGender(gender)
         }
 
+        const showThanks = thanks => {
+          setThanks(thanks)
+        }
+
 
     return (
       <div class='form'>
         <h1>Sign Up</h1>
         <p> </p>
-        <SignUpForm submitTitle={showTitle} submitLname = {showLname} submitFname = {showFname} submitDate = {showDate} submitEmail={showEmail} submitPhone={showPhone} submitGender={showGender} />
-        <br />
+        <SignUpForm submitTitle={showTitle} submitLname = {showLname} submitFname = {showFname} submitDate = {showDate} submitEmail={showEmail} submitPhone={showPhone} submitGender={showGender} submitThanks={showThanks}/>
         <br />
         <div className='signuparea'>
+          <h3>{thanks}</h3>
           <table>
             <tr>
               <td>Title:</td>

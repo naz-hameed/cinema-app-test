@@ -10,6 +10,7 @@ const SignUpForm = (props) => {
   const [date, setDate] = useState("");
   const [phone, setPhone] = useState("");
   const [gender, setGender] = useState(``);
+  const [thanks, setThanks] = useState(`Thanks for the sign up!`);
 
   const handleFnameChange = (event) => {
     setFname([event.target.value]);
@@ -38,6 +39,9 @@ const SignUpForm = (props) => {
   const handleGenderChange = (event) => {
     setGender([event.target.value]);
   };
+  const handleThanksChange = (event) => {
+    setThanks('Thanks for the sign up');
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault(); //stops browser clearing form
@@ -48,6 +52,7 @@ const SignUpForm = (props) => {
     props.submitDate(date);
     props.submitPhone(phone);
     props.submitGender(gender);
+    props.submitThanks(thanks);
   };
 
   return (
@@ -179,17 +184,9 @@ const SignUpForm = (props) => {
         <tr>
           <td> </td>
           <td>
-            <Popup
-              trigger={
                 <button id="signup-btn" className="signupbutton">
                   Sign me up !
                 </button>
-              }
-              modal
-              closeOnDocumentClick
-            >
-              <span> Thanks for the sign-up! </span>
-            </Popup>
           </td>
         </tr>
       </table>
