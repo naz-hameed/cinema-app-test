@@ -15,7 +15,7 @@ describe("Testing our cinema schedule", () => {
 
     test('Check if schedule title renders ', () => {
         const testInstance = mount(<CinemaSchedule />);
-        expect(testInstance.find("#schedule-title").text()).toContain("Schedule");
+        expect(testInstance.find("#schedule-title").text()).toContain("Show Times");
     })
 
 

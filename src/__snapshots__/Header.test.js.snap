@@ -5,7 +5,7 @@ exports[`Snapshot test for header rendering correctly 1`] = `
   <br />
   <img
     alt="logo"
-    class="App-logo form"
+    class="App-logo"
     src="skycinemas.png"
   />
 </header>

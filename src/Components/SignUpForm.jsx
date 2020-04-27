@@ -61,11 +61,11 @@ const SignUpForm = (props) => {
 
           <td>
             <select value={title} onChange={handleTitleChange}>
-              <option value="mrs">Mrs</option>
-              <option value="mr">Mr</option>
-              <option value="dr">Dr</option>
-              <option value="miss">Miss</option>
-              <option value="sir">Sir</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Mr">Mr</option>
+              <option value="Miss">Miss</option>
+              <option value="Dr">Dr</option>
+              <option value="Other">Other</option>
             </select>
           </td>
         </tr>
@@ -155,7 +155,7 @@ const SignUpForm = (props) => {
             <label id="male-btn">
               <input
                 type="radio"
-                value="male"
+                value="Male"
                 name="gender"
                 onChange={handleGenderChange}
                 required
@@ -166,7 +166,7 @@ const SignUpForm = (props) => {
             <label id="female-btn">
               <input
                 type="radio"
-                value="female"
+                value="Female"
                 name="gender"
                 onChange={handleGenderChange}
                 required
@@ -181,7 +181,7 @@ const SignUpForm = (props) => {
           <td>
             <Popup
               trigger={
-                <button id="signup-btn" className="button">
+                <button id="signup-btn" className="signupbutton">
                   Sign me up !
                 </button>
               }

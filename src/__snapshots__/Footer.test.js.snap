@@ -2,7 +2,7 @@
 
 exports[`Snapshot test for footer rendering correctly 1`] = `
 <footer
-  className="mt-auto py-3 container"
+  className="footer"
 >
   <hr
     width="50%"

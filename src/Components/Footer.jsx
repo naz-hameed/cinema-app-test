@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
       
-        <footer className = "mt-auto py-3 container">
+        <footer className = "footer">
             <hr width="50%"></hr>
             &copy; Copyright Sky
             <br/>
