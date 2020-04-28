@@ -2,6 +2,7 @@ import React from "react";
 //import HeroImage from "./HeroImage";
 import CinemaSchedule from "./CinemaSchedule";
 import LatestFilmCarousel from "./LatestFilmCarousel";
+import LatestFilmCoverFlow from "./LatestFilmCoverFlow"
 
 const ScheduleForm = () => {
   return (
@@ -9,7 +10,8 @@ const ScheduleForm = () => {
         <h1>Schedule</h1>
         <CinemaSchedule />
         <br />
-        <LatestFilmCarousel />
+        <LatestFilmCoverFlow />
+
         <br />
         <br />
       </div>
@@ -17,3 +19,6 @@ const ScheduleForm = () => {
 };
 
 export default ScheduleForm;
+
+
+//        <LatestFilmCarousel />
