@@ -173,3 +173,37 @@ input[type=fname],input[type=lname],input[type=email], input[type=phone], input[
 }
 
 
+
+
+#hourstable {
+  border-collapse: collapse;
+  width:100%;
+  table-layout:fixed;
+}
+#hourstable td{
+  width: 500px;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+#hourstable th {
+  border: 1px solid  black;
+  padding: 8px;
+}
+
+#hourstable td+td {
+  width: auto
+}
+
+#hourstable tr:nth-child(even){background-color: #f2f2f2;}
+
+/*#scheduletable tr:hover {background-color: #ddd;}*/
+
+#hourstable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #0ae7fc;
+  color: black;
+
+}
