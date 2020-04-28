@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "react-day-picker/lib/style.css";
-import Popup from "reactjs-popup";
 
 const SignUpForm = (props) => {
   const [title, setTitle] = useState("Mrs");
@@ -57,7 +56,7 @@ const SignUpForm = (props) => {
 
   return (
     <form onSubmit={handleSubmit} className="signup">
-      <table>
+      <table><tbody>
         <tr>
           <td>
             {" "}
@@ -80,7 +79,6 @@ const SignUpForm = (props) => {
             {" "}
             <label id="firstname"> First Name* : </label>{" "}
           </td>
-
           <td>
             <input
               type="fname"
@@ -189,7 +187,7 @@ const SignUpForm = (props) => {
                 </button>
           </td>
         </tr>
-      </table>
+        </tbody></table>
     </form>
   );
 };

@@ -13,24 +13,23 @@ function App() {
   return (
     <body>
       <div className="App">
-        <div class="content">
-          <div class="column left"><h1></h1></div>
-
-          <div class="column middle">
+        <div className="content">
+          <div className="column left"><br /></div>
+          <div className="column middle">
             <Router>
               <div>
                 <nav>
                   <Header />
                   <ul className="Links">
                     <li>
-                      <Link id="home-btn" to="/home-page" class="button menubutton">
+                      <Link id="home-btn" to="/home-page" className="button menubutton">
                         Home
                       </Link>
                       &nbsp; &nbsp;
                       <Link
                         id="schedule-btn"
                         to="/schedule-form"
-                        class="button menubutton"
+                        className="button menubutton"
                       >
                         Schedule
                       </Link>
@@ -38,7 +37,7 @@ function App() {
                       <Link
                         id="signup-btn"
                         to="/signup-page"
-                        class="button menubutton"
+                        className="button menubutton"
                       >
                         Sign-Up Page
                       </Link>

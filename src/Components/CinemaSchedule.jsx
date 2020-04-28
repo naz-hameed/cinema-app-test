@@ -59,8 +59,8 @@ const CinemaSchedule = () => {
 
 export default CinemaSchedule;
 
-{/* <ul>
+/*{ <ul>
 {scheduletable.map((movies) => (
   <li key={movies.id}>{movies.movie}{movies.times}</li>
 ))}
-</ul> */}
+</ul> }*/

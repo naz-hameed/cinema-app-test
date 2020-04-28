@@ -48,14 +48,14 @@ const SignUpPage  = () => {
 
 
     return (
-      <div class='form'>
+      <div className='form'>
         <h1>Sign Up</h1>
         <p> </p>
         <SignUpForm submitTitle={showTitle} submitLname = {showLname} submitFname = {showFname} submitDate = {showDate} submitEmail={showEmail} submitPhone={showPhone} submitGender={showGender} submitThanks={showThanks}/>
         <br />
         <div className='signuparea'>
           <h3>{thanks}</h3>
-          <table>
+          <table><tbody>
             <tr>
               <td>Title:</td>
               <td>{title}</td>
@@ -84,7 +84,7 @@ const SignUpPage  = () => {
               <td>Gender:</td>
               <td>{gender}</td>
             </tr>
-          </table>     
+            </tbody></table>     
         </div> 
         <br />
       </div>  

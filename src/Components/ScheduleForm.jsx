@@ -5,7 +5,7 @@ import LatestFilmCarousel from "./LatestFilmCarousel";
 
 const ScheduleForm = () => {
   return (
-      <div class='form'>
+      <div className='form'>
         <h1>Schedule</h1>
         <CinemaSchedule />
         <br />
