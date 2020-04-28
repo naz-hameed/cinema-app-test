@@ -11,6 +11,7 @@
     "react-alert": "^7.0.0",
     "react-alert-template-basic": "^1.0.0",
     "react-confirm-alert": "^2.6.1",
+    "react-coverflow": "^0.2.20",
     "react-datepicker": "^2.14.1",
     "react-day-picker": "^7.4.8",
     "react-daypicker": "^3.0.10",

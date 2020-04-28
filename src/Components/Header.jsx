@@ -8,7 +8,7 @@ const Header = () => {
         <>
             <header>
                 <br />
-                <img src={logo} class="App-logo form" alt="logo" />
+                <img src={logo} className="App-logo" alt="logo" />
             </header>
         </>
     );

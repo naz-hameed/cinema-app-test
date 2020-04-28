@@ -39,7 +39,7 @@ const CinemaSchedule = () => {
   return (
     <div className="center-div">
       <div id="schedule-title">
-        <h3>Schedule</h3>
+        <h3>Show Times</h3>
       </div>
       <table border="1" id="scheduletable">
         <thead>
@@ -57,3 +57,9 @@ const CinemaSchedule = () => {
 };
 
 export default CinemaSchedule;
+
+/*{ <ul>
+{scheduletable.map((movies) => (
+  <li key={movies.id}>{movies.movie}{movies.times}</li>
+))}
+</ul> }*/

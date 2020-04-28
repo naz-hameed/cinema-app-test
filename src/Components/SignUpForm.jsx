@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "react-day-picker/lib/style.css";
-import Popup from "reactjs-popup";
 
 const SignUpForm = (props) => {
   const [title, setTitle] = useState("Mrs");
@@ -10,6 +9,7 @@ const SignUpForm = (props) => {
   const [date, setDate] = useState("");
   const [phone, setPhone] = useState("");
   const [gender, setGender] = useState(``);
+  const [thanks, setThanks] = useState(`Thanks for the sign up!`);
 
   const handleFnameChange = (event) => {
     setFname([event.target.value]);
@@ -38,6 +38,9 @@ const SignUpForm = (props) => {
   const handleGenderChange = (event) => {
     setGender([event.target.value]);
   };
+  const handleThanksChange = (event) => {
+    setThanks('Thanks for the sign up');
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault(); //stops browser clearing form
@@ -48,11 +51,12 @@ const SignUpForm = (props) => {
     props.submitDate(date);
     props.submitPhone(phone);
     props.submitGender(gender);
+    props.submitThanks(thanks);
   };
 
   return (
     <form onSubmit={handleSubmit} className="signup">
-      <table>
+      <table><tbody>
         <tr>
           <td>
             {" "}
@@ -61,11 +65,11 @@ const SignUpForm = (props) => {
 
           <td>
             <select value={title} onChange={handleTitleChange}>
-              <option value="mrs">Mrs</option>
-              <option value="mr">Mr</option>
-              <option value="dr">Dr</option>
-              <option value="miss">Miss</option>
-              <option value="sir">Sir</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Mr">Mr</option>
+              <option value="Miss">Miss</option>
+              <option value="Dr">Dr</option>
+              <option value="Other">Other</option>
             </select>
           </td>
         </tr>
@@ -75,7 +79,6 @@ const SignUpForm = (props) => {
             {" "}
             <label id="firstname"> First Name* : </label>{" "}
           </td>
-
           <td>
             <input
               type="fname"
@@ -155,7 +158,7 @@ const SignUpForm = (props) => {
             <label id="male-btn">
               <input
                 type="radio"
-                value="male"
+                value="Male"
                 name="gender"
                 onChange={handleGenderChange}
                 required
@@ -166,7 +169,7 @@ const SignUpForm = (props) => {
             <label id="female-btn">
               <input
                 type="radio"
-                value="female"
+                value="Female"
                 name="gender"
                 onChange={handleGenderChange}
                 required
@@ -179,20 +182,12 @@ const SignUpForm = (props) => {
         <tr>
           <td> </td>
           <td>
-            <Popup
-              trigger={
-                <button id="signup-btn" className="button">
+                <button id="signup-btn" className="signupbutton">
                   Sign me up !
                 </button>
-              }
-              modal
-              closeOnDocumentClick
-            >
-              <span> Thanks for the sign-up! </span>
-            </Popup>
           </td>
         </tr>
-      </table>
+        </tbody></table>
     </form>
   );
 };

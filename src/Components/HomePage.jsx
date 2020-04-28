@@ -5,7 +5,7 @@ import CinemaImages from './CinemaImages';
 
 const HomePage  = () => {
     return (
-        <div class='form'>
+        <div className='form'>
             <h1>Home</h1>
             <p></p>
             <p>Welcome to the future, Sky Cinemas are the ultimate social distancing entertainment destinations.</p>
