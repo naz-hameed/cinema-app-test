@@ -6,7 +6,7 @@ const CinemaSchedule = () => {
 
   useEffect(() => {
     const getData = async () => {
-      let response = await axios.get("http://localhost:4000/scheduletable");
+      let response = await axios.get('/schedule');
       let scheduletable = await response.data;
       setScheduleTable(scheduletable);
     };
