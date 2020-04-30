@@ -19,8 +19,9 @@ const CinemaSchedule = () => {
 
 
   const renderSchedule = showing => {
-    getSchedule();
+
     return (
+      <>
       <tr key={showing.cinemaTimesId}>
       <td>{showing.movie}</td>
       <td>
@@ -37,8 +38,9 @@ const CinemaSchedule = () => {
         {showing.times[2][0]} <br />
         {showing.times[2][1]} <br />
         {showing.times[2][2]}
-      </td>
+      </td> 
       </tr>
+      </>
     );
   };
 
@@ -60,7 +62,12 @@ const CinemaSchedule = () => {
             {(schedule && schedule.length > 0) ? (
               schedule.map(entry => renderSchedule(entry))
               ) : (
-                <p>No schedules found</p>
+                <>
+                  <td>Not found</td>
+                  <td>Not found</td>
+                  <td>Not found</td>
+                  <td>Not found</td>
+                </>
               )
             }
           </tbody>

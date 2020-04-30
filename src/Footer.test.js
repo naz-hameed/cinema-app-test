@@ -6,6 +6,8 @@ import Adapter from "enzyme-adapter-react-16";
 configure({adapter: new Adapter(),});
 import Footer from "./Components/Footer";
 import renderer from "react-test-renderer";
+const assert = require('chai').assert
+
 
 describe("Testing our footer", () => {
   test("Render footer component", () => {
@@ -14,7 +16,9 @@ describe("Testing our footer", () => {
   });
 });
 
+
 it("Snapshot test for footer rendering correctly", () => {
   const tree = renderer.create(<Footer />).toJSON();
   expect(tree).toMatchSnapshot();
 });
+

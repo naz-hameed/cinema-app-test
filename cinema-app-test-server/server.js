@@ -4,7 +4,8 @@ const express = require('express');
 const app = express();
 
 // make a connection
-mongoose.connect('mongodb://localhost:27017/schedule',{useNewUrlParser: true, useUnifiedTopology: true});
+//mongoose.connect('mongodb://localhost:27017/schedule',{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/opening',{useNewUrlParser: true, useUnifiedTopology: true});
  
 // get reference to database
 var db = mongoose.connection;
@@ -18,7 +19,19 @@ var ScheduleSchema = mongoose.Schema({
   times: [[String]]
 });
 
+var OpeningSchema = mongoose.Schema({
+  id: Number,
+  day: String, 
+});
+
 collection = mongoose.model('schedule', ScheduleSchema, 'schedule');
+collectionb = mongoose.model('opening', OpeningSchema, 'opening');
+
+app.get(`/opening`, async (req, res) => {
+  let result = await collectionb.find();
+  console.log(result);
+  return res.status(200).send(result);
+});
 
 
 app.get(`/schedule`, async (req, res) => {
@@ -26,6 +39,8 @@ app.get(`/schedule`, async (req, res) => {
   console.log(result);
   return res.status(200).send(result);
 });
+
+
 app.listen(5000, () => {
   console.log('Server running on port 5000')
 });
