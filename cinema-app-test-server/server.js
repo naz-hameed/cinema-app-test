@@ -24,8 +24,20 @@ var OpeningSchema = mongoose.Schema({
   day: String, 
 });
 
+var SubscribersSchema = mongoose.Schema({
+  title: String,
+  first_name: String,
+  last_name: String,
+  email: String,
+  dob: String,
+  phone_number: String,
+  sex : String,
+});
+
 collection = mongoose.model('schedule', ScheduleSchema, 'schedule');
 collectionb = mongoose.model('opening', OpeningSchema, 'opening');
+collectionc = mongoose.model('subscribers', SubscribersSchema, 'subscribers');
+
 
 app.get(`/opening`, async (req, res) => {
   let result = await collectionb.find();
@@ -40,6 +52,11 @@ app.get(`/schedule`, async (req, res) => {
   return res.status(200).send(result);
 });
 
+app.get(`/subscribers`, async (req, res) => {
+  let result = await collectionc.find();
+  console.log(result);
+  return res.status(200).send(result);
+});
 
 app.listen(5000, () => {
   console.log('Server running on port 5000')
