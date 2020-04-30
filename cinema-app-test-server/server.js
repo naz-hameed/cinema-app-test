@@ -5,7 +5,7 @@ const app = express();
 
 // make a connection
 //mongoose.connect('mongodb://localhost:27017/schedule',{useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.connect('mongodb://localhost:27017/opening',{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/cinema',{useNewUrlParser: true, useUnifiedTopology: true});
  
 // get reference to database
 var db = mongoose.connection;
