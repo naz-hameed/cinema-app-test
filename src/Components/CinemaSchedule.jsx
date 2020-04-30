@@ -18,26 +18,57 @@ const CinemaSchedule = () => {
   }
 
 
-  const renderSchedule = schedule => {
+  const renderSchedule = showing => {
     getSchedule();
     return (
-      <li key={schedule.cinemaTimesId}>
-        <h3>{schedule.movie}</h3>
-      </li>
+      <tr key={showing.cinemaTimesId}>
+      <td>{showing.movie}</td>
+      <td>
+        {showing.times[0][0]} <br />
+        {showing.times[0][1]} <br />
+        {showing.times[0][2]}
+      </td>
+      <td>
+        {showing.times[1][0]} <br />
+        {showing.times[1][1]} <br />
+        {showing.times[1][2]}
+      </td>
+      <td>
+        {showing.times[2][0]} <br />
+        {showing.times[2][1]} <br />
+        {showing.times[2][2]}
+      </td>
+      </tr>
     );
   };
 
   return (
     <div className="CinemaSchedule">
-      <ul className="list">
-        {(schedule && schedule.length > 0) ? (
-          schedule.map(entry => renderSchedule(entry))
-        ) : (
-          <p>No schedules found</p>
-        )}
-      </ul>
+      <div id="schedule-title">
+        <h3>Show Times</h3>
+      </div>
+      <table border="1" id="scheduletable">
+          <thead>
+            <tr>
+              <th>Movie</th>
+              <th>Mon</th>
+              <th>Tues</th>
+              <th>Wed</th>
+            </tr>
+          </thead>  
+          <tbody>
+            {(schedule && schedule.length > 0) ? (
+              schedule.map(entry => renderSchedule(entry))
+              ) : (
+                <p>No schedules found</p>
+              )
+            }
+          </tbody>
+        </table>
     </div>
   );
+
+// the old way of doing things
 
   // const scheduleList = scheduleable.map((showing) => (
   //   <>
@@ -62,9 +93,6 @@ const CinemaSchedule = () => {
   //   </>
   // ));
 
-
-
-
   // return (
   //   <div className="center-div">
   //     <div id="schedule-title">
@@ -85,10 +113,6 @@ const CinemaSchedule = () => {
   // );
 };
 
+
 export default CinemaSchedule;
 
-/*{ <ul>
-{scheduletable.map((movies) => (
-  <li key={movies.id}>{movies.movie}{movies.times}</li>
-))}
-</ul> }*/

@@ -15,7 +15,7 @@ db.on('error', console.error.bind(console, 'Connection error:'));
 var ScheduleSchema = mongoose.Schema({
   cinemaTimesId: String,
   movie: String,
-  times: [String]
+  times: [[String]]
 });
 
 collection = mongoose.model('schedule', ScheduleSchema, 'schedule');
