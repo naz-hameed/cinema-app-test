@@ -52,10 +52,10 @@ const CinemaSchedule = () => {
       <table border="1" id="scheduletable">
           <thead>
             <tr>
-              <th>Movie</th>
-              <th>Mon</th>
-              <th>Tues</th>
-              <th>Wed</th>
+              <th id = "movie">Movie</th>
+              <th id = "mon">Mon</th>
+              <th id = "tues">Tues</th>
+              <th id = "wed">Wed</th>
             </tr>
           </thead>  
           <tbody>
