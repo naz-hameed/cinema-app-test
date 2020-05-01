@@ -15,29 +15,9 @@ const SignUpPage = () => {
 
 
 
-  const subscriber = {
-    subscriberId: "008",
-    title: title.toString(),
-    firstName: fname.toString(),
-    lastName: lname.toString(),
-    email: email.toString(),
-    dob: date.toString(),
-    phoneNumber: phone.toString(),
-    sex: gender.toString()
-  }
 
-  const postSubscriber = () => {
-
-    
-    axios.post('/subscribers', subscriber).catch(error => {
-      alert("We have a problem")
-    });
-  }
 
   useEffect(() => {
-
-
-
   })
 
   const showTitle = (title) => {
@@ -73,12 +53,7 @@ const SignUpPage = () => {
   };
 
 
-
-
-
   return (
-
-
     <div className="form">
       <h1>Sign Up</h1>
 
@@ -91,7 +66,7 @@ const SignUpPage = () => {
         submitPhone={showPhone}
         submitGender={showGender}
         submitThanks={showThanks}
-        submitSubscriber={postSubscriber}
+
       />
       <br />
       <div className="signuparea">

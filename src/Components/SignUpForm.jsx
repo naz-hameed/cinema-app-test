@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "react-day-picker/lib/style.css";
+import axios from "axios";
+
 
 const SignUpForm = (props) => {
   const [title, setTitle] = useState("Mrs");
@@ -8,18 +10,12 @@ const SignUpForm = (props) => {
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
   const [phone, setPhone] = useState("");
-  const [gender, setGender] = useState(``);
+  const [gender, setGender] = useState("");
   const [thanks, setThanks] = useState(`Thanks for the sign up!`);
-  
+
+
 
   useEffect(() => {
-    props.submitFname(fname);
-    props.submitLname(lname);
-    props.submitTitle(title);
-    props.submitEmail(email);
-    props.submitDate(date);
-    props.submitPhone(phone);
-    props.submitGender(gender);  
 
   })
 
@@ -40,11 +36,19 @@ const SignUpForm = (props) => {
   };
 
   const handleDateChange = (event) => {
-    setDate([event.target.value]);
+    let date=[event.target.value];
+    var today = new Date();
+    const dob = new Date(Date.parse(date));
+
+    if (dob > today)
+      alert("Please enter a valid date of birth");
+    else
+      setDate([event.target.value]);
   };
 
   const handlePhoneChange = (event) => {
     setPhone([event.target.value]);
+
   };
 
   const handleGenderChange = (event) => {
@@ -56,6 +60,12 @@ const SignUpForm = (props) => {
 
 
   const handleSubmit = (event) => {
+
+    let str = phone.toString();
+    if (str.length < 11)
+      alert("Phone number too short");
+
+
     event.preventDefault(); //stops browser clearing form
     props.submitFname(fname);
     props.submitLname(lname);
@@ -65,7 +75,25 @@ const SignUpForm = (props) => {
     props.submitPhone(phone);
     props.submitGender(gender);
     props.submitThanks(thanks);
-    props.submitSubscriber();
+
+
+   const subscriber={
+    subscriberId: "008",
+    title: title.toString(),
+    firstName: fname.toString(),
+    lastName: lname.toString(),
+    email: email.toString(),
+    dob: date.toString(),
+    phoneNumber: phone.toString(),
+    sex: gender.toString() 
+   }
+   console.log("subscriber="+subscriber);
+
+    axios.post('/subscribers', subscriber).catch(error => {
+      alert("We have a problem")
+    });
+
+
 
   };
 
@@ -142,7 +170,7 @@ const SignUpForm = (props) => {
           </td>
 
           <td>
-            <input
+            <input 
               type="date"
               value={date}
               onChange={handleDateChange}
