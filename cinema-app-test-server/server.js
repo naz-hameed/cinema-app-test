@@ -27,7 +27,7 @@ var OpeningSchema = mongoose.Schema({
 });
 
 var SubscribersSchema = mongoose.Schema({
-  subscriberId: String,
+  //subscriberId: String,
   title: String,
   firstName: String,
   lastName: String,
