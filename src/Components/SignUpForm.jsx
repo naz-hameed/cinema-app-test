@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "react-day-picker/lib/style.css";
 import axios from "axios";
 
@@ -10,11 +10,21 @@ const SignUpForm = (props) => {
   const [date, setDate] = useState("");
   const [phone, setPhone] = useState("");
   const [gender, setGender] = useState(``);
-  
   const [thanks, setThanks] = useState(`Thanks for the sign up!`);
+  
 
- 
 
+
+  useEffect(() => {
+    props.submitFname(fname);
+    props.submitLname(lname);
+    props.submitTitle(title);
+    props.submitEmail(email);
+    props.submitDate(date);
+    props.submitPhone(phone);
+    props.submitGender(gender);  
+
+  })
 
   const handleFnameChange = (event) => {
     setFname([event.target.value]);
@@ -47,21 +57,6 @@ const SignUpForm = (props) => {
     setGender([event.target.value]);
   };
 
-  const postCustomer = () => {
-    const customer = {
-      "title": "Mr",
-      "first_name": "Frednew",
-      "last_name": "Flintstonenew",
-      "email": "fredflintstone@gmail.com",
-      "dob": "1988-04-28",
-      "phone_number": "07777777777",
-      "sex": "Male"
-    }
-    axios.post('/subscribers', customer).catch(error => {
-      alert("We have a problem")
-    });
-  }
-
 
   const handleSubmit = (event) => {
     event.preventDefault(); //stops browser clearing form
@@ -73,7 +68,7 @@ const SignUpForm = (props) => {
     props.submitPhone(phone);
     props.submitGender(gender);
     props.submitThanks(thanks);
-    postCustomer();
+
   };
 
   return (

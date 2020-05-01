@@ -1,6 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SignUpForm from "./SignUpForm";
 import PostCustomer from "./PostCustomer";
+import axios from "axios";
+
+
+
+
+
 
 const SignUpPage = () => {
   const [title, setTitle] = useState("-");
@@ -11,6 +17,28 @@ const SignUpPage = () => {
   const [phone, setPhone] = useState("-");
   const [gender, setGender] = useState("-");
   const [thanks, setThanks] = useState("");
+
+
+  const postSubscriber = () => {
+    const subscriber = {
+      "title": "Mr",
+      "first_name": {fname},
+      "last_name": "Flintstonenew8",
+      "email": "fredflintstone@gmail.com",
+      "dob": "1988-04-28",
+      "phone_number": "07777777777",
+      "sex": "Male"
+    }
+    
+    axios.post('/subscribers', subscriber).catch(error => {
+      alert("We have a problem")
+    });
+  }
+
+  useEffect(() => {
+    postSubscriber()
+
+  })
 
   const showTitle = (title) => {
     setTitle(title);
@@ -44,10 +72,14 @@ const SignUpPage = () => {
     setThanks(thanks);
   };
 
+
+
+
+
   return (
     <div className="form">
       <h1>Sign Up</h1>
-      <p> </p>
+
       <SignUpForm
         submitTitle={showTitle}
         submitLname={showLname}
@@ -63,6 +95,7 @@ const SignUpPage = () => {
 
       <br />
       <div className="signuparea">
+
         <h3>{thanks}</h3>
         <table>
           <tbody>

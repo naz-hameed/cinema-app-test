@@ -1,10 +1,12 @@
 var mongoose = require('mongoose');
 const express = require('express');
+const bodyParser = require('body-parser');
  
 const app = express();
 
+
+
 // make a connection
-//mongoose.connect('mongodb://localhost:27017/schedule',{useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connect('mongodb://localhost:27017/cinema',{useNewUrlParser: true, useUnifiedTopology: true});
  
 // get reference to database
@@ -57,6 +59,24 @@ app.get(`/subscribers`, async (req, res) => {
   console.log(result);
   return res.status(200).send(result);
 });
+
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+)
+
+app.use(bodyParser.json())
+
+
+
+app.post('/subscribers', async (req, res) => {
+  console.log("POST "+req.body.title+", "+req.body.first_name+","+req.body.last_name+","+req.body.email+","+req.body.dob+","+req.body.phone_number+","+req.body.sex);
+  let subscribers = await collectionc.create(req.body);
+  return res.status(201).send({error: false,subscribers})
+})
+
+
 
 app.listen(5000, () => {
   console.log('Server running on port 5000')
