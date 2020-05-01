@@ -27,12 +27,13 @@ var OpeningSchema = mongoose.Schema({
 });
 
 var SubscribersSchema = mongoose.Schema({
+  subscriberId: String,
   title: String,
-  first_name: String,
-  last_name: String,
+  firstName: String,
+  lastName: String,
   email: String,
   dob: String,
-  phone_number: String,
+  phoneNumber: String,
   sex : String,
 });
 
@@ -71,7 +72,8 @@ app.use(bodyParser.json())
 
 
 app.post('/subscribers', async (req, res) => {
-  console.log("POST "+req.body.title+", "+req.body.first_name+","+req.body.last_name+","+req.body.email+","+req.body.dob+","+req.body.phone_number+","+req.body.sex);
+  console.log("POST "+req.body.subscriberId+", "+req.body.title+", "+req.body.firstName+","
+  +req.body.lastName+","+req.body.email+","+req.body.dob+","+req.body.phoneNumber+","+req.body.sex);
   let subscribers = await collectionc.create(req.body);
   return res.status(201).send({error: false,subscribers})
 })

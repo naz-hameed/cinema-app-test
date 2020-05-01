@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SignUpForm from "./SignUpForm";
-import PostCustomer from "./PostCustomer";
 import axios from "axios";
-
-
-
-
 
 
 const SignUpPage = () => {
@@ -19,16 +14,20 @@ const SignUpPage = () => {
   const [thanks, setThanks] = useState("");
 
 
+
+  const subscriber = {
+    subscriberId: "008",
+    title: title.toString(),
+    firstName: fname.toString(),
+    lastName: lname.toString(),
+    email: email.toString(),
+    dob: date.toString(),
+    phoneNumber: phone.toString(),
+    sex: gender.toString()
+  }
+
   const postSubscriber = () => {
-    const subscriber = {
-      "title": "Mr",
-      "first_name": {fname},
-      "last_name": "Flintstonenew8",
-      "email": "fredflintstone@gmail.com",
-      "dob": "1988-04-28",
-      "phone_number": "07777777777",
-      "sex": "Male"
-    }
+
     
     axios.post('/subscribers', subscriber).catch(error => {
       alert("We have a problem")
@@ -36,7 +35,8 @@ const SignUpPage = () => {
   }
 
   useEffect(() => {
-    postSubscriber()
+
+
 
   })
 
@@ -77,6 +77,8 @@ const SignUpPage = () => {
 
 
   return (
+
+
     <div className="form">
       <h1>Sign Up</h1>
 
@@ -89,13 +91,11 @@ const SignUpPage = () => {
         submitPhone={showPhone}
         submitGender={showGender}
         submitThanks={showThanks}
+        submitSubscriber={postSubscriber}
       />
-      
-      <PostCustomer params = {title}/>
-
       <br />
       <div className="signuparea">
-
+      <p> </p>
         <h3>{thanks}</h3>
         <table>
           <tbody>

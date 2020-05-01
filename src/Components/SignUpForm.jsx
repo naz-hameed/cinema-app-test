@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "react-day-picker/lib/style.css";
-import axios from "axios";
 
 const SignUpForm = (props) => {
   const [title, setTitle] = useState("Mrs");
@@ -12,8 +11,6 @@ const SignUpForm = (props) => {
   const [gender, setGender] = useState(``);
   const [thanks, setThanks] = useState(`Thanks for the sign up!`);
   
-
-
 
   useEffect(() => {
     props.submitFname(fname);
@@ -68,6 +65,7 @@ const SignUpForm = (props) => {
     props.submitPhone(phone);
     props.submitGender(gender);
     props.submitThanks(thanks);
+    props.submitSubscriber();
 
   };
 
