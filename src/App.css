@@ -143,6 +143,7 @@ input[type=fname],input[type=lname],input[type=email], input[type=phone], input[
   border-collapse: collapse;
   width:100%;
   table-layout:fixed;
+  overflow:scroll;
 }
 #scheduletable td{
   width: 500px;

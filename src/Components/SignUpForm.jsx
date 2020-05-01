@@ -35,13 +35,27 @@ const SignUpForm = (props) => {
     setEmail([event.target.value]);
   };
 
+  function deltaDate(input, days, months, years) {
+    var date = new Date(input);
+    date.setDate(date.getDate() + days);
+    date.setMonth(date.getMonth() + months);
+    date.setFullYear(date.getFullYear() + years);
+    return date;
+}
   const handleDateChange = (event) => {
     let date=[event.target.value];
-    var today = new Date();
+    let today = new Date();
+    let EIGHTEEN_YEARS_BACK = deltaDate(new Date(), 0, 0, -18);
     const dob = new Date(Date.parse(date));
+    dob.setHours(0); // set to the start of the day
+    //console.log(today);
+    //console.log(EIGHTEEN_YEARS_BACK);
+    //console.log(dob);
 
     if (dob > today)
       alert("Please enter a valid date of birth");
+    else if (dob > EIGHTEEN_YEARS_BACK)
+      alert("Subscribers must be over 18 years old");
     else
       setDate([event.target.value]);
   };

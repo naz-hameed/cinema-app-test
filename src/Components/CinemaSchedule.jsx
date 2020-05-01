@@ -38,6 +38,25 @@ const CinemaSchedule = () => {
         {showing.times[2][0]} <br />
         {showing.times[2][1]} <br />
         {showing.times[2][2]}
+      </td>       
+      <td>
+        {showing.times[3][0]} <br />
+        {showing.times[3][1]} <br />
+        {showing.times[3][2]}
+      </td> 
+      <td>
+        {showing.times[4][0]} <br />
+        {showing.times[4][1]} <br />
+        {showing.times[4][2]}
+      </td>       <td>
+        {showing.times[5][0]} <br />
+        {showing.times[5][1]} <br />
+        {showing.times[5][2]}
+      </td> 
+      <td>
+        {showing.times[6][0]} <br />
+        {showing.times[6][1]} <br />
+        {showing.times[6][2]}
       </td> 
       </tr>
       </>
@@ -56,6 +75,10 @@ const CinemaSchedule = () => {
               <th>Mon</th>
               <th>Tues</th>
               <th>Wed</th>
+              <th>Thurs</th>
+              <th>Fri</th>
+              <th>Sat</th>
+              <th>Sun</th>
             </tr>
           </thead>  
           <tbody>

@@ -80,6 +80,14 @@ app.post('/subscribers', async (req, res) => {
 
 
 
+app.delete('/subscribers', async (req, res) => {
+  console.log("POST "+req.body.subscriberId+", "+req.body.title+", "+req.body.firstName+","
+  +req.body.lastName+","+req.body.email+","+req.body.dob+","+req.body.phoneNumber+","+req.body.sex);
+  let subscribers = await collectionc.create(req.body);
+  return res.status(201).send({error: false,subscribers})
+})
+
+
 app.listen(5000, () => {
   console.log('Server running on port 5000')
 });
