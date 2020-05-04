@@ -74,40 +74,47 @@ const SignUpForm = (props) => {
 
 
   const handleSubmit = (event) => {
+    event.preventDefault(); //stops browser clearing form
 
+    // validation
+    let valid = true;
     let str = phone.toString();
     if (str.length < 11)
+    {
       alert("Phone number too short");
+      valid = false;
+    }
+    // do more validation here
+
+    if (valid)
+    {
+      props.submitFname(fname);
+      props.submitLname(lname);
+      props.submitTitle(title);
+      props.submitEmail(email);
+      props.submitDate(date);
+      props.submitPhone(phone);
+      props.submitGender(gender);
+      props.submitThanks(thanks);
 
 
-    event.preventDefault(); //stops browser clearing form
-    props.submitFname(fname);
-    props.submitLname(lname);
-    props.submitTitle(title);
-    props.submitEmail(email);
-    props.submitDate(date);
-    props.submitPhone(phone);
-    props.submitGender(gender);
-    props.submitThanks(thanks);
+      const subscriber={
+        //subscriberId: "008",
+        title: title.toString(),
+        firstName: fname.toString(),
+        lastName: lname.toString(),
+        email: email.toString(),
+        dob: date.toString(),
+        phoneNumber: phone.toString(),
+        sex: gender.toString() 
+      }
+      console.log("subscriber="+subscriber);
 
+        axios.post('/subscribers', subscriber).catch(error => {
+          alert("We have a problem")
+        });
 
-   const subscriber={
-    //subscriberId: "008",
-    title: title.toString(),
-    firstName: fname.toString(),
-    lastName: lname.toString(),
-    email: email.toString(),
-    dob: date.toString(),
-    phoneNumber: phone.toString(),
-    sex: gender.toString() 
-   }
-   console.log("subscriber="+subscriber);
-
-    axios.post('/subscribers', subscriber).catch(error => {
-      alert("We have a problem")
-    });
-
-
+    }
 
   };
 
