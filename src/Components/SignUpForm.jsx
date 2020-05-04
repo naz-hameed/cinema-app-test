@@ -85,6 +85,19 @@ const SignUpForm = (props) => {
       valid = false;
     }
     // do more validation here
+    let res = fname.toString();
+    if(res.length < 2)
+    {
+      alert("First name has to be atleast 2 characters")
+      valid = false;
+    }
+
+    let res1 = lname.toString();
+    if(res1.length < 2)
+    {
+      alert("Last name has to be atleast 2 characters")
+      valid = false;
+    }
 
     if (valid)
     {
