@@ -32,13 +32,13 @@ const OpeningHours = () => {
   return (
     <div className="OpeningTimes">
       <div id="hours-title">
-        <h3>Opening Hours</h3>
+        <h3>Cinema Opening Hours</h3>
       </div>
       <table border="1" id="hourstable">
           <thead>
             <tr>
-               <th>Days</th>
-               <th>Times</th>
+               <th id = "days">Days</th>
+               <th id = "times">Times</th>
             </tr>
           </thead>  
           <tbody>
